@@ -50,8 +50,11 @@ table {
 
 /*---------------------------------------------------------------*/
 :root {
-	--sidebarBackgroundColor : rgb(0, 112, 209);
-	--buttonBackgroundColor: rgb(0, 112, 209);
+	--sidebarBackgroundColor : #BCCEF8;
+	--buttonBackgroundColor: #98A8F8;
+	--mainBackgroundColor: #BCCEF8;
+	--textColor: #333333;
+	--imgFilter:invert();
 }
 * {
 	box-sizing: border-box;
@@ -90,18 +93,19 @@ svg {
 .sidebar img {
 	width: 2.5rem;
 	padding-right: 0.5rem;
-	filter: invert();
+	
 }
 .sidebar a {
 	display: flex;
 	align-items: center;
-	color: white;
+	color: var(--textColor);
 	font-size: 1.5rem;
 }
 .view-dashboard {
 	display: flex;
 	align-items: center;
 	padding: 1rem;
+	color: var(--textColor);
 }
 .view-dashboard h2 {
 	font-weight: 500;
@@ -132,8 +136,9 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 	box-shadow: 8px 1px 10px 0px black;
-
+	background-color: var(--mainBackgroundColor);
 	grid-area: header;
+	color: var(--textColor);
 }
 .header-div {
 	display: flex;
@@ -169,7 +174,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem 2rem;
+	padding: 1rem 0;
 }
 .header-form form button {
 	background-color: transparent;
@@ -232,7 +237,7 @@ header {
 	border: none;
 	border-radius: 0.3rem;
 	background-color: var(--buttonBackgroundColor);
-	color: white;
+	color: var(--textColor);
 }
 .header-btns button:hover {
 	/* scale: 1.2; */
@@ -251,7 +256,8 @@ header {
 }
 
 .card {
-	box-shadow: 1px 1px 1px black;
+	box-shadow: 1px -1px 8px var(--textColor);
+	background: linear-gradient(90deg, #98A8F8 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%);
 	border-radius: 0.5rem;
 	padding: 1rem;
 }
@@ -292,7 +298,8 @@ header {
 }
 .announcement-div,
 .trending-div{
-	border: 1px solid black;
+	box-shadow: 1px -1px 8px var(--textColor);
+	
 	border-radius: 0.8rem;
 }
 .announcement-div h3,
@@ -364,7 +371,7 @@ header {
 	}
 	
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	.header-btns button {
 		font-size: 0.8rem;
 		margin-left: 0.3rem;
