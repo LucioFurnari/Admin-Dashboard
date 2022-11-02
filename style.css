@@ -362,8 +362,20 @@ header {
 	.announcement-section {
 		display: none;
 	}
+	
+}
+@media (max-width: 450px) {
 	.header-btns button {
 		font-size: 0.8rem;
+		margin-left: 0.3rem;
+	}
+	.header-form form {
+		padding: 0.5rem;
+	}
+}
+@media (max-width: 360px) {
+	.header-btns button {
+		font-size: 0.6rem;
 		margin-left: 0.3rem;
 	}
 }
