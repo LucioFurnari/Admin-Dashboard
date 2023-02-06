@@ -87,7 +87,6 @@ svg {
 	flex-direction: column;
 	justify-content: flex-start;
 	background-color: var(--sidebarBackgroundColor);
-
 	grid-area: sidebar;
 }
 .sidebar img {
@@ -100,6 +99,7 @@ svg {
 	align-items: center;
 	color: var(--textColor);
 	font-size: 1.5rem;
+	
 }
 .view-dashboard {
 	display: flex;
@@ -168,7 +168,7 @@ header {
 }
 
 .header-form {
-	width: 100%;
+	width: 50%;
 }
 .header-form form {
 	display: flex;
@@ -186,6 +186,12 @@ header {
 .header-form input{
 	width: 80%;
 	height: 2rem;
+	border: none;
+	border-radius: 0.6rem;
+	outline: none;
+}
+.header-form input:focus{
+	box-shadow: inset 1px 1px 6px var(--textColor);
 }
 
 .user-notification {
@@ -249,7 +255,7 @@ header {
 	display: grid;
 	gap: 1rem;
 	padding: 1rem;
-	grid-template-columns: repeat(auto-fit,minmax(15rem,1fr)); 
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
 	
 	overflow: auto;
 	grid-area: projects;
@@ -257,9 +263,13 @@ header {
 
 .card {
 	box-shadow: 1px -1px 8px var(--textColor);
-	background: linear-gradient(90deg, #98A8F8 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%);
+	/* background: linear-gradient(90deg, #98A8F8 2%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%); */
+	border-left: 5px solid var(--buttonBackgroundColor);
 	border-radius: 0.5rem;
 	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 .card img {
 	width: 1.8rem;
@@ -355,6 +365,9 @@ header {
 	}
 	.user-profile {
 		display: none;
+	}
+	.header-form {
+		width: 80%;
 	}
 }
 @media (max-width: 750px) {
